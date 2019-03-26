@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin:0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        color: #333;
+        
+        text-decoration: none;
+    }
+    nav{
+        background-color: #f1f1f1;
+        width:500px;
+        margin:10px auto 0;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3)
+    }
+    nav::after{
+        content: '';
+        display: block;
+        clear:both;
+    }
+    nav>ul>li{
+        
+        position: relative;
+        float:left;
+    }
+    nav>ul>li:hover .a{
+        display: block;
+    }
+    nav .a {
+        
+        display: none;
+        position: absolute;
+        top: 100%;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3)
+        
+        
+    }
+    .a>li{
+        display: block;
+        min-width: 150px;
+    }
+    a{
+        display: block;
+        padding: 10px;
+        
+    }
+    a:hover{
+        color: #000;
+        background: rgba(0,0,0,0.4);
+    }
+    .b>li>a{
+        padding: 10px 20px;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+    <ul class="b">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">作品</a></li>
+        <li>
+            <a href="#">更多</a>
+        <ul class="a">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">知乎</a></li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+</body>
+</html>
